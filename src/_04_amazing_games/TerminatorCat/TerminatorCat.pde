@@ -1,4 +1,6 @@
 // 1. Drag and drop an image of a cat onto this sketch
+
+
 //    a. First find an image of a cat with BIG eyes(use google to search)
 //    b. Right click on the image and select 'Save image As'
 //    c. Rename the image something short (e.g. cat.jpg)
@@ -8,7 +10,7 @@
 
 // This line of code creates a variable to hold your faccate picture
 // You will use it later.
-PImage cat;
+PImage zombie;
 int x=0;
 int y=0;
 
@@ -16,15 +18,17 @@ void setup() {
   
 // 2. The code below loads your cat picture into the program. 
 //     Make sure the file name is correct for the cat image you saved earlier
-cat = loadImage("cat.jpg");
+zombie = loadImage("zombie.jpg");
   
 // 3. Set the size of the sketch. Make it big enough to show the cat you chose.
+  size(500,500);
 
 // 4. Resize the cat so it is the same size as the sketch
+ zombie.resize(500,500);
 
 // 5. DRAW CAT.    Use the background() command to make the cat the background of the sketch
 //    Run the program to see if the cat is drawn. Get this working before you go on.
- 
+   background(zombie);
 
   }
 
@@ -33,7 +37,7 @@ void draw() {
 // 6. WHERE IS THE EYE? This code prints the x and y locations of the mouse when you click.
 //    You can use this to find the x and y for the center of the cat's eyes.
       if(mousePressed){
-          println("Mouse’s x-position: " + mouseX + "\n" + "Mouse’s y-position: " + mouseY + "\n");
+          println("x: " + mouseX + "\n" + "y: " + mouseY + "\n");
       }
 
 // 7. Run the program and click on one of the cat's eyes. 
@@ -44,6 +48,13 @@ void draw() {
 // 8. DRAW CIRCLES.
 //     The circles will have black lines around them by default. Put noStroke(); here to remove them.
 
+    noStroke();
+    fill(#DE0BB7);
+    ellipse(177, 189, 20, 20);
+    ellipse(221, 131, 20, 20);
+    
+
+
 // 9.  COLOR.  Set the color of your ellipse to the laser color you would like
 //    Remember to use the   fill()  command to set colors.
 
@@ -51,7 +62,7 @@ void draw() {
 // 10 Use the ellipse() command to draw a circle on the eye (you will have to guess its size). 
 //    Use the x and y variables you just created to place the ellipse in the correct location.
 //                  The ellipse command looks like this:
-                ellipse(x, y, width, height);
+                
 // Run the program to make sure it is in the right place and is the right size.
 }
 
