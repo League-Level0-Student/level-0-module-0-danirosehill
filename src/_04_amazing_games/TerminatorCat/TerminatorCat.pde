@@ -11,8 +11,10 @@
 // This line of code creates a variable to hold your faccate picture
 // You will use it later.
 PImage zombie;
-int x=0;
-int y=0;
+int x=177;
+int y=189;
+int x1= 221;
+int y1= 131;
 
 void setup() {
   
@@ -50,8 +52,8 @@ void draw() {
 
     noStroke();
     fill(#DE0BB7);
-    ellipse(177, 189, 20, 20);
-    ellipse(221, 131, 20, 20);
+    ellipse(x, y, 20, 20);
+    ellipse(x1, y1, 20, 20);
     
 
 
@@ -69,12 +71,16 @@ void draw() {
 // 11.  LASER BEAM.  This code will make your ellipse move down and to the right when you press 
 //      the space bar. Run the program to test it.
 //      If you want it to move to the left, change to x-1=.
-void keyPressed() {
-    x+=1;
-    y+=1;
-    
+ 
+ void keyPressed(){
+    x+=5;
+    y+=5;
+    x1+=5;
+    y1+=5;
+ }
+ 
 // 12.  If you want them to go faster, add more than one each time the key is pressed    
-}
+
  
 
 //13.   Now make the cat shoot lasers from the other eye.
